@@ -33,6 +33,7 @@ BoundedContext Projetos {
             String idSolicitacao
             Date dataCriacao
             String justificativa
+            String idAtividade
             String situacao
             - List<ItemSolicitacao> itens
 
