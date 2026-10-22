@@ -64,6 +64,7 @@ Aggregate Projeto {
         String nome
         Date dataInicio
         Date dataTermino
+        String gerenteResponsavel
         String situacao
         - List<AtividadeProjeto> atividades
 
