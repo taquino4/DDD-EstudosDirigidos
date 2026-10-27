@@ -123,14 +123,14 @@ Compras -> Projetos
 
 ```text
 AquisicaoConcluida
-Compras -> Financeiro
+Compras -> 
 ```
 
 Não acrescente referências diretas às Entities internas dos outros Bounded Contexts.
 
 ---
 
-## 5. Representar eventos do Contexto Financeiro
+## 5. Representar eventos do Contexto 
 
 Dentro do `Aggregate ObrigacaoPagamento`, acrescente:
 
@@ -154,7 +154,7 @@ Considere:
 
 ```text
 ParcelaPaga
-Financeiro -> Financeiro
+Evento interno ao contexto Financeiro
 ```
 
 `ParcelaPaga` poderá permanecer como evento interno ao contexto Financeiro.
@@ -177,7 +177,7 @@ Utilize como referência:
 | `SolicitacaoAprovada` | Projetos | Compras | solicitação, projeto, valor |
 | `NovaAutorizacaoSolicitada` | Compras | Projetos | aquisição e novo valor |
 | `AquisicaoConcluida` | Compras | Financeiro | aquisição e valor final |
-| `ParcelaPaga` | Financeiro | Financeiro | obrigação e parcela |
+| `ParcelaPaga` | Financeiro | Interno ao Financeiro | obrigação e parcela |
 | `ObrigacaoQuitada` | Financeiro | Projetos | obrigação e aquisição |
 
 Regra:
